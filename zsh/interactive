@@ -20,4 +20,15 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-conda activate macosPrime
+CONDA_VERSION=$(conda info --json | jq '.conda_version')
+
+if [[ "${CONDA_VERSION:-NONE}" != "NONE" ]]; then
+	case "${OSTYPE}" in
+		darwin*)
+			conda activate macosPrime
+		;;
+		*)
+			conda activate base
+		;;
+	esac
+fi
