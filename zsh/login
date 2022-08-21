@@ -1,0 +1,9 @@
+# This file is sourced by login shells, after rc.  It is not meant to
+# be used together with login, but could be if desired.  The shell
+# should be considered fully set up by now.  This is for external
+# commands which do not modify shell behaviors.
+
+. ~/.shell/login
+
+
+ssource ~/.zprezto/runcoms/zlogin

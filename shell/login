@@ -1,0 +1,42 @@
+# Put your environment variables here
+
+# Personal information
+export NAME='Boone, Jon'
+export EMAIL='jon.boone@viasat.com'
+
+# Preferred programs
+export PAGER=less
+export ALTERNATE_EDITOR=''
+export EDITOR='emacsclient -t'
+export VISUAL='emacsclient -c -a emacs'
+
+# Language
+export LANG='en_US.UTF-8'
+export LC_ALL=$LANG
+export LC_COLLATE=$LANG
+export LC_CTYPE=$LANG
+export LC_MESSAGES=$LANG
+export LC_MONETARY=$LANG
+export LC_NUMERIC=$LANG
+export LC_TIME=$LANG
+
+# Path settings
+pathprepend ${HOME} GOPATH
+pathprepend ${GOPATH}/bin PATH
+pathprepend /Applications/Emacs.app/Contents/MacOS/bin PATH
+pathprepend /usr/local/Cellar/make/4.3/bin PATH
+pathprepend ~/bin PATH
+pathprepend ~/lib LD_LIBRARY_PATH
+pathprepend ~/include CPATH
+pathprepend ${HOME} GOPATH
+
+# The current directory should never be in $PATH
+pathremove . PATH
+pathremove "" PATH
+
+# TeXLive 2020 ENV Variables
+export TEXMFHOME=${HOME}/texmf
+
+# GITSTATUS
+export GITSTATUS_LOG_LEVEL=DEBUG
+

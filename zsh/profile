@@ -1,0 +1,8 @@
+# This file is sourced by login shells, prior to rc. It is not meant to be
+# used together with login, but could be if desired.
+#
+# This should be used to set environment variables which do not need to
+# be updated frequently. Variables that configure tools or commands that
+# are executed but may require a significant amount of time.
+
+ssource ~/.zprezto/runcoms/zprofile

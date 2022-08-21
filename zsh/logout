@@ -1,0 +1,6 @@
+# This file is sourced by login shells upon exit to clear resources
+# that were set up at login.
+
+. ~/.shell/logout
+
+ssource ~/.zprezto/runcoms/zlogout

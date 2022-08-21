@@ -1,0 +1,8 @@
+# This file is sourced every time zsh starts (including sub-shells)
+# Is is the first script file read and should be used to set
+# environment variables which need to be updated frequently.  Do
+# not add aliases!
+
+. ~/.shell/env
+
+ssource ~/.zprezto/runcoms/zshenv
