@@ -21,14 +21,15 @@ export LC_NUMERIC=$LANG
 export LC_TIME=$LANG
 
 # Path settings
+pathprepend /opt/cmucl/latest CMUCLPATH
 pathprepend ${HOME} GOPATH
 pathprepend ${GOPATH}/bin PATH
+pathprepend ${CMUCLPATH}/bin PATH
 pathprepend /Applications/Emacs.app/Contents/MacOS/bin PATH
 pathprepend /usr/local/Cellar/make/4.3/bin PATH
 pathprepend ~/bin PATH
 pathprepend ~/lib LD_LIBRARY_PATH
 pathprepend ~/include CPATH
-pathprepend ${HOME} GOPATH
 
 # The current directory should never be in $PATH
 pathremove . PATH
@@ -39,4 +40,3 @@ export TEXMFHOME=${HOME}/texmf
 
 # GITSTATUS
 export GITSTATUS_LOG_LEVEL=DEBUG
-
