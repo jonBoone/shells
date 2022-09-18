@@ -9,6 +9,10 @@ export BASH_ENV=~/.bash/env
 
 . ~/.shell/env_functions
 
+# to log invocations, set $LOG_DEBUG to true
+# export LOG_DEBUG=true
+logmessage "in ${HOME}/.shell/env"
+
 umask 0077
 
 ssource ~/.shell/env_local
