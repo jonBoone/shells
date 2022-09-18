@@ -3,7 +3,15 @@
 # should be considered fully set up by now.  This is for external
 # commands which do not modify shell behaviors.
 
+logmessage "in ${HOME}/.zsh/login"
+
+logmessage "\$PATH = ${PATH}"
+logmessage "invoking ${HOME}/.shell/login"
 . ~/.shell/login
+logmessage "after invoking ${HOME}/.shell/login"
+logmessage "\$PATH = ${PATH}"
 
-
+logmessage "invoking ${HOME}/.zprezto/runcoms/zlogin"
 ssource ~/.zprezto/runcoms/zlogin
+logmessage "after invoking ${HOME}/.zprezto/runcoms/zlogin"
+logmessage "\$PATH = ${PATH}"
