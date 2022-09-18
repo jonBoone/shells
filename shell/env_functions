@@ -3,6 +3,13 @@ indirect_expand () {
     env |sed -n "s/^$1=//p"
 }
 
+# Usage: logmessage MESSAGE
+logmessage () {
+    if [ ${LOG_DEBUG} ]; then
+        echo "$(date --rfc-3339='seconds') ${1}" >> ${HOME}/.shell_invocation.log
+    fi
+}
+
 # Usage: pathremove /path/to/bin [PATH]
 # Eg, to remove ~/bin from $PATH
 #     pathremove ~/bin PATH
