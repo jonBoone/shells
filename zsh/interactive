@@ -21,6 +21,20 @@ ssource ~/.zprezto/runcoms/zshrc
 logmessage "after invoking ${HOME}/.zprezto/runcoms/zshrc"
 logmessage "\$PATH = ${PATH}"
 
+# Add aliases here
+
+# tmux: attach to last session or create new
+alias t='tmux attach || tmux new-session'
+
+# tmux: attach to a named session
+alias ta='tmux attach -t'
+
+# tmux: create new session
+alias tn='tmux new-session'
+
+# tmux: list sessions
+alias tl='tmux list-sessions'
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
