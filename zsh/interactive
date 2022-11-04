@@ -60,6 +60,9 @@ if [[ "${CONDA_VERSION:-NONE}" != "NONE" ]]; then
     darwin*)
       conda activate macosPrime
     ;;
+    linux-gnu)
+	conda activate py310
+    ;;
     *)
       conda activate base
     ;;
