@@ -58,7 +58,7 @@ CONDA_VERSION=$(conda info --json | jq '.conda_version')
 if [[ "${CONDA_VERSION:-NONE}" != "NONE" ]]; then
   case "${OSTYPE}" in
     darwin*)
-      conda activate macosPrime
+      conda activate macOSPrime
     ;;
     linux-gnu)
 	conda activate py310
