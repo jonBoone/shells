@@ -53,7 +53,7 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-CONDA_VERSION=$(conda info --json | jq '.conda_version')
+CONDA_VERSION=$(conda info | awk '/.+conda version : / {print $4}')
 
 if [[ "${CONDA_VERSION:-NONE}" != "NONE" ]]; then
   case "${OSTYPE}" in
