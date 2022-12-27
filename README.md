@@ -25,5 +25,5 @@ ln -s ${HOME}/.zsh/env ${HOME}/.zshenv
 ln -s ${HOME}/.zsh/login ${HOME}/.zlogin
 ln -s ${HOME}/.zsh/logout ${HOME}/.zlogout
 ```
-
-
+# add prezto support
+ln -s ${HOME}/.zprezto/runcoms/zpreztorc ${HOME}/.zpreztorc
