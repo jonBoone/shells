@@ -3,7 +3,6 @@
 case "${OSTYPE}" in
   darwin*)
     pathprepend /Applications/Emacs.app/Contents/MacOS/bin PATH
-    pathprepend /usr/local/Cellar/make/4.3/bin PATH
   ;;
   *)
   ;;
