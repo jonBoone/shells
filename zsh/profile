@@ -5,4 +5,7 @@
 # be updated frequently. Variables that configure tools or commands that
 # are executed but may require a significant amount of time.
 
+logmessage "in ${HOME}/.zsh/profile, where \$PATH = ${PATH}"
+logmessage "invoking ${HOME}/.zprezto/runcoms/zprofile"
 ssource ~/.zprezto/runcoms/zprofile
+logmessage "in ${HOME}/.zsh/profile, after invoking ${HOME}/.zprezto/runcoms/zshprofile, where \$PATH = ${PATH}"

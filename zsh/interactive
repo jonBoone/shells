@@ -1,4 +1,4 @@
-logmessage "in ${HOME}/.zshrc"
+logmessage "in ${HOME}/.zsh/interactive, where \$PATH = ${PATH}"
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
@@ -10,16 +10,13 @@ fi
 # This file is sourced after profile by interactive shells, but prior
 # to login.
 
-logmessage "\$PATH = ${PATH}"
 logmessage "invoking ${HOME}/.shell/interactive"
 . ~/.shell/interactive
-logmessage "after invoking ${HOME}/.shell/interactive"
-logmessage "\$PATH = ${PATH}"
+logmessage "in ${HOME}/.zsh/interactive, after invoking ${HOME}/.shell/interactive, where \$PATH = ${PATH}"
 
 logmessage "invoking ${HOME}/.zprezto/runcoms/zshrc"
 ssource ~/.zprezto/runcoms/zshrc
-logmessage "after invoking ${HOME}/.zprezto/runcoms/zshrc"
-logmessage "\$PATH = ${PATH}"
+logmessage "in ${HOME}/.zsh/interactive, after invoking ${HOME}/.zprezto/runcoms/zshrc, where \$PATH = ${PATH}"
 
 # Add aliases here
 
@@ -38,6 +35,7 @@ alias tl='tmux list-sessions'
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+logmessage "initializing conda"
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('${HOME}/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
@@ -52,7 +50,9 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+logmessage "in ${HOME}/.zsh/interactive, after initializing conda, where \$PATH = ${PATH}"
 
+logmessage "activating conda env"
 CONDA_VERSION=$(conda info | awk '/.+conda version : / {print $4}')
 
 if [[ "${CONDA_VERSION:-NONE}" != "NONE" ]]; then
@@ -69,3 +69,4 @@ if [[ "${CONDA_VERSION:-NONE}" != "NONE" ]]; then
   esac
 fi
 
+logmessage "in ${HOME}/.zsh/interactive, after activating conda env ${CONDA_DEFAULT_ENV}, where \$PATH = ${PATH}"

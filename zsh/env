@@ -6,10 +6,10 @@
 
 . ~/.shell/env
 
-logmessage "in ${HOME}/.zsh/env"
-
-logmessage "\$PATH = ${PATH}"
+logmessage "in ${HOME}/.zsh/env, where \$PATH = ${PATH}"
 logmessage "invoking ${HOME}/.zprezto/runcoms/zshenv"
 ssource ~/.zprezto/runcoms/zshenv
-logmessage "after invoking ${HOME}/.zprezto/runcoms/zshenv"
-logmessage "\$PATH = ${PATH}"
+logmessage "in ${HOME}/.zsh/env, after invoking ${HOME}/.zprezto/runcoms/zshenv, where \$PATH = ${PATH}"
+
+export PYTHONUSERBASE=${HOME}/macosx
+
