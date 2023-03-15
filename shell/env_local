@@ -3,6 +3,11 @@
 case "${OSTYPE}" in
   darwin*)
     pathprepend /Applications/Emacs.app/Contents/MacOS/bin PATH
+    pathprepend /usr/local/go/bin PATH
+    pathprepend /usr/local/opt/coreutils/libexec/gnubin PATH
+    pathprepend /usr/local/opt/coreutils/libexec/gnuman MANPATH
+    export SDP_API_BASE_URL=https://preprod-internal.sdpapi.viasat.io
+    export SDP_API_ACCESS_TOKEN="{your access token}"
   ;;
   *)
   ;;
