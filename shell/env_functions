@@ -1,3 +1,23 @@
+# Usage: check_login_shell -> $? == 0 || 1
+check_login_shell () {
+    echo "not implemented"
+}
+
+# Usage: check_login_bash_shell -> $? == 0 || 1
+check_login_bash_shell () {
+    shopt -q login_shell
+}
+
+# Usage: check_login_sh_shell -> $? == 0 || 1
+check_login_sh_shell () {
+    [ $- = '*l*']
+}
+
+# Usage: check_login_zsh_shell -> $? == 0 || 1
+check_login_zsh_shell () {
+    [[ -o login ]]
+}
+
 # Usage: indirect_expand PATH -> $PATH
 indirect_expand () {
     env |sed -n "s/^$1=//p"
