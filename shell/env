@@ -13,6 +13,8 @@ export BASH_ENV=~/.bash/env
 # export LOG_DEBUG=true
 logmessage "in ${HOME}/.shell/env"
 
-umask 0077
+# umask 0077
+
+export GOPATH="${HOME}/src"
 
 ssource ~/.shell/env_local
