@@ -22,8 +22,6 @@ export LC_TIME=$LANG
 
 # Path settings
 pathprepend /opt/cmucl/latest CMUCLPATH
-pathprepend ${HOME} GOPATH
-pathprepend ${GOPATH}/bin PATH
 pathprepend ${CMUCLPATH}/bin PATH
 
 pathprepend ~/bin PATH
