@@ -1,8 +1,8 @@
 # Put your environment variables here
 
 # Personal information
-export NAME='Boone, Jon'
-export EMAIL='jon.boone@viasat.com'
+export NAME='Jon Boone'
+export EMAIL='ipmonger@delamancha.org'
 
 # Preferred programs
 export PAGER=less
