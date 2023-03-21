@@ -61,7 +61,7 @@ if [[ "${CONDA_VERSION:-NONE}" != "NONE" ]]; then
       conda activate macOSPrime
     ;;
     linux-gnu)
-	conda activate py310
+      conda activate py310
     ;;
     *)
       conda activate base
@@ -74,6 +74,6 @@ logmessage "in ${HOME}/.zsh/interactive, after activating conda env ${CONDA_DEFA
 
 logmessage "configuring nix home-manager support"
 # setup NIX home-manager support
-export NIX_PATH=darwin-config=$HOME/.nixpkgs/darwin-configuration.nix:$HOME/.nix-defexpr/channels${NIX_PATH:+:}$NIX_PATH
-source $HOME/.nix-profile/etc/profile.d/hm-session-vars.sh
+# export NIX_PATH=darwin-config=$HOME/.nixpkgs/darwin-configuration.nix:$HOME/.nix-defexpr/channels${NIX_PATH:+:}$NIX_PATH
+# source $HOME/.nix-profile/etc/profile.d/hm-session-vars.sh
 
