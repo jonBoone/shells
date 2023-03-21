@@ -11,5 +11,4 @@ logmessage "invoking ${HOME}/.zprezto/runcoms/zshenv"
 ssource ~/.zprezto/runcoms/zshenv
 logmessage "in ${HOME}/.zsh/env, after invoking ${HOME}/.zprezto/runcoms/zshenv, where \$PATH = ${PATH}"
 
-export PYTHONUSERBASE=${HOME}/macosx
 

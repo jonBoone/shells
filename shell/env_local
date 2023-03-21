@@ -8,6 +8,9 @@ case "${OSTYPE}" in
     pathprepend /usr/local/opt/coreutils/libexec/gnuman MANPATH
     export SDP_API_BASE_URL=https://preprod-internal.sdpapi.viasat.io
     export SDP_API_ACCESS_TOKEN="{your access token}"
+    export PYTHONUSERBASE="${HOME}/macosx"
+  ;;
+  linux*)
   ;;
   *)
   ;;
