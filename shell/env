@@ -16,5 +16,6 @@ logmessage "in ${HOME}/.shell/env"
 # umask 0077
 
 export GOPATH="${HOME}/src"
+export XDG_CONFIG_HOME="${XDG_CONFIG_HOME:=$HOME/.config}"
 
 ssource ~/.shell/env_local
