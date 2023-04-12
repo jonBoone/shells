@@ -21,7 +21,7 @@ export LC_NUMERIC=$LANG
 export LC_TIME=$LANG
 
 # Path settings
-pathprepend /opt/cmucl/latest CMUCLPATH
+pathprepend /home/iain/.local/cmucl/latest CMUCLPATH
 pathprepend ${CMUCLPATH}/bin PATH
 
 pathprepend ~/bin PATH
