@@ -24,6 +24,11 @@ export LC_TIME=$LANG
 pathprepend /home/iain/.local/cmucl/latest CMUCLPATH
 pathprepend ${CMUCLPATH}/bin PATH
 
+pathprepend /home/iain/.local/sbcl/latest SBCLPATH
+pathprepend ${SBCLPATH}/bin PATH
+
+pathprepend ${HOME}/.local/emacs/bin PATH
+
 pathprepend ~/bin PATH
 pathprepend ~/lib LD_LIBRARY_PATH
 pathprepend ~/include CPATH
