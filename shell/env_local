@@ -2,13 +2,22 @@
 
 case "${OSTYPE}" in
   darwin*)
-    pathprepend /usr/local/anaconda3/bin PATH 
+    pathprepend "${HOME}/.local/anaconda3/bin" PATH
+    pathprepend "${HOME}/.local/cmucl/latest/bin" PATH
+    pathprepend "${HOME}/.local/sbcl/latest/bin" PATH
+    pathprepend "${HOME}/bin" PATH
     pathprepend /Applications/Emacs.app/Contents/MacOS/bin PATH
     pathprepend /usr/local/go/bin PATH
     pathprepend /usr/local/opt/coreutils/libexec/gnubin PATH
     pathprepend /usr/local/opt/coreutils/libexec/gnuman MANPATH
   ;;
   linux*)
+    pathprepend "${HOME}/.local/anaconda3/bin" PATH
+    pathprepend "${HOME}/.local/cmucl/latest/bin" PATH
+    pathprepend "${HOME}/.local/sbcl/latest/bin" PATH
+    pathprepend "${HOME}/.local/emacs/bin" PATH
+    pathprepend "${HOME}/bin" PATH
+    pathprepend "/usr/local/texlive/2023/bin/x86_64-linux" PATH
   ;;
   *)
   ;;

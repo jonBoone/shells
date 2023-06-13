@@ -21,14 +21,6 @@ export LC_NUMERIC=$LANG
 export LC_TIME=$LANG
 
 # Path settings
-pathprepend /home/iain/.local/cmucl/latest CMUCLPATH
-pathprepend ${CMUCLPATH}/bin PATH
-
-pathprepend /home/iain/.local/sbcl/latest SBCLPATH
-pathprepend ${SBCLPATH}/bin PATH
-
-pathprepend ${HOME}/.local/emacs/bin PATH
-
 pathprepend ~/bin PATH
 pathprepend ~/lib LD_LIBRARY_PATH
 pathprepend ~/include CPATH
@@ -36,9 +28,6 @@ pathprepend ~/include CPATH
 # The current directory should never be in $PATH
 pathremove . PATH
 pathremove "" PATH
-
-# TeXLive 2020 ENV Variables
-export TEXMFHOME=${HOME}/texmf
 
 # GITSTATUS
 export GITSTATUS_LOG_LEVEL=DEBUG
