@@ -11,6 +11,8 @@ case "${OSTYPE}" in
     pathprepend /usr/local/go/bin PATH
     pathprepend /usr/local/opt/coreutils/libexec/gnubin PATH
     pathprepend /usr/local/opt/coreutils/libexec/gnuman MANPATH
+    pathprepend /usr/local/opt/libgpg-error/lib DYLD_LIBRARY_PATH
+    pathprepend /usr/local/opt/gpgme/lib DYLD_LIBRARY_PATH
   ;;
   linux*)
     pathprepend "${HOME}/.local/anaconda3/bin" PATH
