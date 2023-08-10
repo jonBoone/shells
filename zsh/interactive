@@ -38,14 +38,14 @@ alias tl='tmux list-sessions'
 logmessage "initializing conda"
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/iain/.local/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('${HOME}/.local/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/Users/iain/.local/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/iain/.local/anaconda3/etc/profile.d/conda.sh"
+    if [ -f "${HOME}/.local/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "${HOME}/.local/anaconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/Users/iain/.local/anaconda3/bin:$PATH"
+        export PATH="${HOME}/.local/anaconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
@@ -70,10 +70,4 @@ if [[ "${CONDA_VERSION:-NONE}" != "NONE" ]]; then
 fi
 
 logmessage "in ${HOME}/.zsh/interactive, after activating conda env ${CONDA_DEFAULT_ENV}, where \$PATH = ${PATH}"
-
-
-logmessage "configuring nix home-manager support"
-# setup NIX home-manager support
-# export NIX_PATH=darwin-config=$HOME/.nixpkgs/darwin-configuration.nix:$HOME/.nix-defexpr/channels${NIX_PATH:+:}$NIX_PATH
-# source $HOME/.nix-profile/etc/profile.d/hm-session-vars.sh
 
