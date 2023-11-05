@@ -6,6 +6,7 @@ case "${OSTYPE}" in
     pathprepend "${HOME}/.local/cmucl/latest/bin" PATH
     pathprepend "${HOME}/.local/sbcl/latest/bin" PATH
     pathprepend "${HOME}/.docker/bin" PATH
+    pathprepend "${HOME}/.cargo/bin" PATH
     pathprepend "${HOME}/bin" PATH
     pathprepend "/Library/Java/JavaVirtualMachines/graalvm-jdk-21+35.1/Contents/Home/bin" PATH
     pathprepend /Applications/Emacs.app/Contents/MacOS/bin PATH
