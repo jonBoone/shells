@@ -10,6 +10,9 @@
 . ~/.bash/env
 . ~/.bash/interactive
 
+# initializing nodenv
+eval "$(nodenv init -)"
+
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/home/iain/.local/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
@@ -25,3 +28,4 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+source /opt/homebrew/etc/profile.d/bash_completion.sh
