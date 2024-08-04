@@ -2,7 +2,6 @@
 
 case "${OSTYPE}" in
   darwin*)
-    pathprepend "${HOME}/.local/anaconda3/bin" PATH
     pathprepend "${HOME}/.local/cmucl/latest/bin" PATH
     pathprepend "${HOME}/.local/sbcl/latest/bin" PATH
     pathprepend "${HOME}/.docker/bin" PATH
@@ -15,6 +14,8 @@ case "${OSTYPE}" in
     pathprepend /usr/local/opt/coreutils/libexec/gnuman MANPATH
     pathprepend /usr/local/opt/libgpg-error/lib DYLD_LIBRARY_PATH
     pathprepend /usr/local/opt/gpgme/lib DYLD_LIBRARY_PATH
+    pathprepend "${HOME}/.local/anaconda3/bin" PATH
+
   ;;
   linux*)
     pathprepend "${HOME}/.local/anaconda3/bin" PATH
