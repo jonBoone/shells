@@ -35,10 +35,6 @@ alias tl='tmux list-sessions'
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-logmessage "initializing nodenv"
-eval "$(nodenv init -)"
-logmessage "in ${HOME}/.zsh/interactive, after initializing nodenv, where \$PATH = ${PATH}"
-
 logmessage "initializing conda"
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
