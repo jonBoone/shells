@@ -7,8 +7,10 @@ export EMAIL='ipmonger@delamancha.org'
 # Preferred programs
 export PAGER=less
 export ALTERNATE_EDITOR=''
-export EDITOR='emacsclient -t'
-export VISUAL='emacsclient -c -a emacs'
+export EDITOR='nvim'
+
+# NVIM related variables
+export OS_TERMUX='tmux'
 
 # Language
 export LANG='en_US.UTF-8'
