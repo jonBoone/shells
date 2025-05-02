@@ -35,38 +35,38 @@ alias tl='tmux list-sessions'
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-logmessage "initializing conda"
+#logmessage "initializing conda"
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/iain/.local/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/Users/iain/.local/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/iain/.local/anaconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/Users/iain/.local/anaconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
+#__conda_setup="$('/Users/iain/.local/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+#if [ $? -eq 0 ]; then
+#    eval "$__conda_setup"
+#else
+#    if [ -f "/Users/iain/.local/anaconda3/etc/profile.d/conda.sh" ]; then
+#        . "/Users/iain/.local/anaconda3/etc/profile.d/conda.sh"
+#    else
+#        export PATH="/Users/iain/.local/anaconda3/bin:$PATH"
+#    fi
+#fi
+#unset __conda_setup
 # <<< conda initialize <<<
-logmessage "in ${HOME}/.zsh/interactive, after initializing conda, where \$PATH = ${PATH}"
+#logmessage "in ${HOME}/.zsh/interactive, after initializing conda, where \$PATH = ${PATH}"
 
-logmessage "activating conda env"
-CONDA_VERSION=$(conda info | awk '/.+conda version : / {print $4}')
+#logmessage "activating conda env"
+#CONDA_VERSION=$(conda info | awk '/.+conda version : / {print $4}')
 
-if [[ "${CONDA_VERSION:-NONE}" != "NONE" ]]; then
-  case "${OSTYPE}" in
-    darwin*)
-      conda activate macOSPrime
-    ;;
-    linux-gnu)
-      conda activate py310
-    ;;
-    *)
-      conda activate base
-    ;;
-  esac
-fi
+#if [[ "${CONDA_VERSION:-NONE}" != "NONE" ]]; then
+#  case "${OSTYPE}" in
+#    darwin*)
+#      conda activate macOSPrime
+#    ;;
+#    linux-gnu)
+#      conda activate py310
+#    ;;
+#    *)
+#      conda activate base
+#    ;;
+#  esac
+#fi
 
-logmessage "in ${HOME}/.zsh/interactive, after activating conda env ${CONDA_DEFAULT_ENV}, where \$PATH = ${PATH}"
+#logmessage "in ${HOME}/.zsh/interactive, after activating conda env ${CONDA_DEFAULT_ENV}, where \$PATH = ${PATH}"
