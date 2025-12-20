@@ -1,5 +1,3 @@
-logmessage "in ${HOME}/.zsh/interactive, where \$PATH = ${PATH}"
-
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -10,13 +8,9 @@ fi
 # This file is sourced after profile by interactive shells, but prior
 # to login.
 
-logmessage "invoking ${HOME}/.shell/interactive"
 . ~/.shell/interactive
-logmessage "in ${HOME}/.zsh/interactive, after invoking ${HOME}/.shell/interactive, where \$PATH = ${PATH}"
 
-logmessage "invoking ${HOME}/.zprezto/runcoms/zshrc"
 ssource ~/.zprezto/runcoms/zshrc
-logmessage "in ${HOME}/.zsh/interactive, after invoking ${HOME}/.zprezto/runcoms/zshrc, where \$PATH = ${PATH}"
 
 # Add aliases here
 
@@ -35,38 +29,42 @@ alias tl='tmux list-sessions'
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-#logmessage "initializing conda"
-# >>> conda initialize >>>
+#>>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-#__conda_setup="$('/Users/iain/.local/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-#if [ $? -eq 0 ]; then
-#    eval "$__conda_setup"
-#else
-#    if [ -f "/Users/iain/.local/anaconda3/etc/profile.d/conda.sh" ]; then
-#        . "/Users/iain/.local/anaconda3/etc/profile.d/conda.sh"
-#    else
-#        export PATH="/Users/iain/.local/anaconda3/bin:$PATH"
-#    fi
-#fi
-#unset __conda_setup
-# <<< conda initialize <<<
-#logmessage "in ${HOME}/.zsh/interactive, after initializing conda, where \$PATH = ${PATH}"
+__conda_setup="$('/opt/homebrew/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/opt/homebrew/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/opt/homebrew/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/opt/homebrew/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+#<<< conda initialize <<<
 
-#logmessage "activating conda env"
-#CONDA_VERSION=$(conda info | awk '/.+conda version : / {print $4}')
+CONDA_VERSION=$(conda info | awk '/.+conda version : / {print $4}')
 
-#if [[ "${CONDA_VERSION:-NONE}" != "NONE" ]]; then
-#  case "${OSTYPE}" in
-#    darwin*)
-#      conda activate macOSPrime
-#    ;;
-#    linux-gnu)
-#      conda activate py310
-#    ;;
-#    *)
-#      conda activate base
-#    ;;
-#  esac
-#fi
+if [[ "${CONDA_VERSION:-NONE}" != "NONE" ]]; then
+    case "${OSTYPE}" in
+        darwin*)
+            conda activate macOSPrime
+            ;;
+        linux-gnu)
+            conda activate py310
+            ;;
+        *)
+            conda activate base
+            ;;
+        esac
+fi
 
-#logmessage "in ${HOME}/.zsh/interactive, after activating conda env ${CONDA_DEFAULT_ENV}, where \$PATH = ${PATH}"
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/iain/.lmstudio/bin"
+# End of LM Studio CLI section
+
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
