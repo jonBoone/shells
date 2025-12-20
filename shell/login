@@ -7,7 +7,7 @@ export EMAIL='ipmonger@delamancha.org'
 # Preferred programs
 export PAGER=less
 export ALTERNATE_EDITOR=''
-export EDITOR='nvim'
+export EDITOR='emacs -nw'
 
 # NVIM related variables
 export OS_TERMUX='tmux'
@@ -33,3 +33,9 @@ pathremove "" PATH
 
 # GITSTATUS
 export GITSTATUS_LOG_LEVEL=DEBUG
+
+# LOCAL_LLM server
+export OPENAI_BASE_URL=http://localhost:1234/v1
+export OPENAI_API_KEY=lm-studio
+export DEFAULT_MODEL=meta-llama-3-8b-instruct
+

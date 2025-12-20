@@ -4,3 +4,8 @@
 
 . ~/.sh/env
 . ~/.sh/login
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/iain/.lmstudio/bin"
+# End of LM Studio CLI section
+
